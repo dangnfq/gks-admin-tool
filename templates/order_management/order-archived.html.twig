@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order archived{% endblock %}
+
+{% block breadcrumb %}
+<section>
+    <div class="container-fluid breadcrumbWrapper truncate-ellipsis">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 d-flex align-items-center">
+                    <nav class="d-flex align-items-center" style="font-size: 1em;">
+                        <a class="breadcrumb-item fontGreyDark" href="/">
+                            <span class="glyphicons glyphicons-home"></span>
+                        </a>
+                        <a class="breadcrumb-item fontGreyDark" href="{{ path('order_overview') }}">
+                            Order management
+                        </a>
+                        <span class="breadcrumb-item separators active"></span>
+                        <span class="fontBlue" title="Dashboard">Archive order</span>
+                    </nav>
+                </div>
+                <div class="col-3 accountSettings fontGreyDark vertical-center-text-right d-inline"
+                    style="font-size: 1em;">
+                    <a href="#">
+                        <span class="glyphicons glyphicons-user d-inline"></span>&nbsp;
+                        <span class="d-none d-sm-inline">Hien Le</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/order-overview.css') }}" media="all">
+{% endblock %}
+
+{% block body %}
+
+<div id="yourSalesOverview">
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>My <strong>archived sales</strong> in overview</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DATATABLE -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>-->
+                <link rel="stylesheet" media="all" type="text/css"
+                    href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+                <div id="datatableOrderOverView_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <div>
+                        <div id="datatableOrderOverView_filter" class="dataTables_filter"><label><input type="search"
+                                    class="form-control form-control-sm" placeholder="Search"
+                                    aria-controls="datatableOrderOverView"></label></div>
+                        <div class="dataTables_length" id="datatableOrderOverView_length"><label><select
+                                    name="datatableOrderOverView_length" aria-controls="datatableOrderOverView"
+                                    class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select></label></div>
+                    </div>
+                    <table id="datatableOrderOverView" class="display datatable-inner dataTable no-footer"
+                        style="width: 100%;" role="grid">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" aria-label="STATUS: activate to sort column ascending"
+                                    style="width: 163px;">STATUS</th>
+                                <th class="sorting_desc" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 153px;" aria-sort="descending"
+                                    aria-label="ORDER: activate to sort column ascending">ORDER</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 121px;"
+                                    aria-label="DATE: activate to sort column ascending">DATE</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 176px;"
+                                    aria-label="INVOICE: activate to sort column ascending">INVOICE</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 145px;"
+                                    aria-label="BUYER: activate to sort column ascending">BUYER</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 143px;"
+                                    aria-label="VALUE: activate to sort column ascending">VALUE</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 333px;"
+                                    aria-label="MINIMUM VALUE">MINIMUM VALUE</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 26px;" aria-label="">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td valign="top" colspan="8" class="dataTables_empty">No data available in table</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <div class="dataTables_paginate paging_simple_numbers" id="datatableOrderOverView_paginate">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled"
+                                    id="datatableOrderOverView_previous"><a href="#"
+                                        aria-controls="datatableOrderOverView" data-dt-idx="0" tabindex="0"
+                                        class="page-link">«</a></li>
+                                <li class="paginate_button page-item next disabled" id="datatableOrderOverView_next"><a
+                                        href="#" aria-controls="datatableOrderOverView" data-dt-idx="1" tabindex="0"
+                                        class="page-link">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none translate-action">SHOW</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

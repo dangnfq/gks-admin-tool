@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block breadcrumb %}
+    {% include "home/breadcrumb.html.twig" %}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard-overview-seller.css') }}" media="all">
+{% endblock %}
+
+{% block body %}
+
+    {% include "home/content.html.twig" %}
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+    $(document).ready(function () {
+        $('body').show();
+    });
+
+</script>
+<script>
+    $(".memberina-block").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $('.groupd').offset().top - 30 }, 700);
+    });
+</script>
+<script>
+    (function () {
+        'use strict';
+        let queryStr = General.getQueryStringValue;
+        if (queryStr('redirect_uri') !== '' && queryStr('grant_type') !== '' && queryStr('client_id') !== '' && queryStr('client_secret') !== '') {
+            setTimeout(function () {
+                location.replace(queryStr('redirect_uri'));
+            }, 1000)
+        }
+    })();
+</script>
+{% endblock %}

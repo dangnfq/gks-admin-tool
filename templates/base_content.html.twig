@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="app-body">
+    {% include "layout/sidebar.html.twig" %}
+
+    <main class="main">
+        {% include "layout/header-wrapper.html.twig" %}
+
+        {% block breadcrumb %}{% endblock %}
+
+        {% block content %}{% endblock %}
+    </main>
+</div>
+{% endblock %}

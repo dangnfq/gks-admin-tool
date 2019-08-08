@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="{{ app.request.getLocale() }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSRF Token -->
+    {# <meta name="csrf-token" content="{{ csrf_token() }}"> #}
+    <title>GKS Admin Tool</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/leftsidebar3.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/glyphicons-social.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/glyphicons-halflings.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/glyphicons.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/select2.min.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}" media="all">
+    {% block css %}{% endblock %}
+</head>
+
+<body class="en app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    {% include "layout/top-menu.html.twig" %}
+
+    {% include "layout/header-wrapper.html.twig" %}
+
+    {% block breadcrumb %}{% endblock %}
+
+    {% include "layout/sidebar.html.twig" %}
+
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript" src="https://mvp.gks.systems/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/moment.min.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/de.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/leftsidebar.js"></script>
+    <script type="text/javascript" src="https://mvp.gks.systems/js/custom.js?version=1565259588"></script>
+
+    {% block js %}{% endblock %}
+</body>
+
 </html>

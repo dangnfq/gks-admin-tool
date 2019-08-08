@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My purchase{% endblock %}
+
+{% block breadcrumb %}
+<section>
+    <div class="container-fluid breadcrumbWrapper truncate-ellipsis">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 d-flex align-items-center">
+                    <nav class="d-flex align-items-center" style="font-size: 1em;">
+                        <a class="breadcrumb-item fontGreyDark" href="/">
+                            <span class="glyphicons glyphicons-home"></span>
+                        </a>
+                        <a class="breadcrumb-item fontGreyDark" href="{{ path('order_overview') }}">
+                            Order management
+                        </a>
+                        <span class="breadcrumb-item separators active"></span>
+                        <span class="fontBlue" title="Dashboard">My purchase</span>
+                    </nav>
+                </div>
+                <div class="col-3 accountSettings fontGreyDark vertical-center-text-right d-inline"
+                    style="font-size: 1em;">
+                    <a href="#">
+                        <span class="glyphicons glyphicons-user d-inline"></span>&nbsp;
+                        <span class="d-none d-sm-inline">Hien Le</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/order-overview.css') }}" media="all">
+{% endblock %}
+
+{% block body %}
+
+<div id="yourSalesOverview">
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Your <strong>purchases</strong> in overview</h1>
+                    <div class="group-banner datatable-filter-custom">
+                        <a href="" data-column="0" ,="" data-value="0">
+                            <div class="item item0">
+                                <div class="top-item">
+
+                                    <span class="halflings halflings-refresh" aria-hidden="true"></span>
+                                    <span>1</span>
+
+                                </div>
+                                <hr>
+                                <p>ALL</p>
+                            </div>
+                        </a>
+                        <a href="" data-column="0" ,="" data-value="2">
+                            <div class="item item1">
+                                <div class="top-item">
+
+                                    <span class="halflings halflings-log-in" aria-hidden="true"></span>
+                                    <span>0</span>
+
+                                </div>
+                                <hr>
+                                <p>NEW INQUIRIES</p>
+                            </div>
+                        </a>
+                        <a href="" data-column="0" ,="" data-value="2||3||4||7">
+                            <div class="item item2">
+
+                                <div class="top-item">
+
+                                    <span class="halflings halflings-pause" aria-hidden="true"></span>
+                                    <span>1</span>
+                                </div>
+                                <hr>
+                                <p>WAIT FOR PROCESSING</p>
+
+                            </div>
+                        </a>
+                        <a href="" data-column="0" ,="" data-value="3">
+                            <div class="item item3">
+
+                                <div class="top-item">
+                                    <span class="glyphicons glyphicons-handshake" aria-hidden="true"></span>
+                                    <span>1</span>
+                                </div>
+                                <hr>
+                                <p>READY FOR FINISH</p>
+
+                            </div>
+                        </a>
+                        <a href="" data-column="0" ,="" data-value="4||7">
+                            <div class="item item4">
+
+                                <div class="top-item">
+                                    <span class="halflings halflings-flash" aria-hidden="true"></span>
+                                    <span>0</span>
+                                </div>
+                                <hr>
+                                <p>COMPLAINTS TO PROCESS</p>
+
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DATATABLE -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>-->
+                <link rel="stylesheet" media="all" type="text/css"
+                    href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+                <div id="datatableOrderOverView_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <div>
+                        <div id="datatableOrderOverView_filter" class="dataTables_filter"><label><input type="search"
+                                    class="form-control form-control-sm" placeholder="Search"
+                                    aria-controls="datatableOrderOverView"></label></div>
+                        <div class="dataTables_length" id="datatableOrderOverView_length"><label><select
+                                    name="datatableOrderOverView_length" aria-controls="datatableOrderOverView"
+                                    class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select></label></div>
+                    </div>
+                    <table id="datatableOrderOverView" class="display datatable-inner dataTable no-footer"
+                        style="width: 100%;" role="grid">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" aria-label="STATUS: activate to sort column ascending"
+                                    style="width: 105px;">STATUS</th>
+                                <th class="sorting_desc" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 98px;" aria-sort="descending"
+                                    aria-label="ORDER: activate to sort column ascending">ORDER</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 150px;"
+                                    aria-label="DATE: activate to sort column ascending">DATE</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 150px;"
+                                    aria-label="DEADLINE: activate to sort column ascending">DEADLINE</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 114px;"
+                                    aria-label="INVOICE: activate to sort column ascending">INVOICE</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 162px;"
+                                    aria-label="SELLER: activate to sort column ascending">SELLER</th>
+                                <th class="sorting" tabindex="0" aria-controls="datatableOrderOverView" rowspan="1"
+                                    colspan="1" style="width: 102px;"
+                                    aria-label="VALUE: activate to sort column ascending">VALUE</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 222px;"
+                                    aria-label="MINIMUM VALUE">MINIMUM VALUE</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 141px;"
+                                    aria-label=""></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td>
+                                    <div title="Binding order is present, please pay invoice amount, eventually upload documents and confirm delivery or complain about delivery, respectively."
+                                        class="btn background-lignt_green status"><span
+                                            class="glyphicons glyphicons-handshake" aria-hidden="true"></span></div>
+                                </td>
+                                <td class="sorting_1">2</td>
+                                <td>2018-01-01</td>
+                                <td><span class="red">2018-07-26</span></td>
+                                <td>
+                                    <div class="document"><span class="halflings halflings-note light_green"
+                                            aria-hidden="true"></span> <span>02</span></div>
+                                </td>
+                                <td>Huy Huynh</td>
+                                <td>11.00 €</td>
+                                <td><span class="halflings halflings-ok light_green order-minimun"
+                                        aria-hidden="true"></span></td>
+                                <td><a class="btn btn-info btn-edit background-blue" href="/order/2">SHOW</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <div class="dataTables_paginate paging_simple_numbers" id="datatableOrderOverView_paginate">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled"
+                                    id="datatableOrderOverView_previous"><a href="#"
+                                        aria-controls="datatableOrderOverView" data-dt-idx="0" tabindex="0"
+                                        class="page-link">«</a></li>
+                                <li class="paginate_button page-item active"><a href="#"
+                                        aria-controls="datatableOrderOverView" data-dt-idx="1" tabindex="0"
+                                        class="page-link">1</a></li>
+                                <li class="paginate_button page-item next disabled" id="datatableOrderOverView_next"><a
+                                        href="#" aria-controls="datatableOrderOverView" data-dt-idx="2" tabindex="0"
+                                        class="page-link">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none translate-action">SHOW</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Glyphicons New';
+    src: url("../fonts/glyphicons-basic.svg#glyphiconsbasic") format("svg"); }
+  .glyphicons-new {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font: normal normal 16px/1 'Glyphicons New';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 4px; }
+  
+  /* Add icons you will be using below */
+  #productList .datatable-filter-custom .top-item {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; }
+  
+  .glyphicons-new-list {
+    text-indent: -9999px;
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px;
+    background-image: url(/fonts/glyphiconssvg/glyphicons-basic-115-list.svg);
+    background-repeat: no-repeat; }
+  
+  .glyphicons-new-check {
+    text-indent: -9999px;
+    width: 34px;
+    height: 33px;
+    background-size: 30px 40px;
+    background: url(/fonts/glyphiconssvg/glyphicons-basic-739-check.svg);
+    background-repeat: no-repeat;
+    margin-top: 4px; }
+  
+  .glyphicons-new-pause {
+    text-indent: -9999px;
+    width: 32px;
+    height: 40px;
+    background-size: 30px 40px;
+    background: url(/fonts/glyphiconssvg/glyphicons-basic-174-pause.svg);
+    background-repeat: no-repeat;
+    margin-top: 5px; }
+  
+  .glyphicons-new-circle-empty-alert {
+    text-indent: -9999px;
+    width: 32px;
+    height: 40px;
+    background-size: 30px 40px;
+    background: url(/fonts/glyphiconssvg/glyphicons-basic-197-circle-empty-alert.svg);
+    background-repeat: no-repeat;
+    margin-top: 5px; }
+  
+  .glyphicons-new-security-camera {
+    text-indent: -9999px;
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px;
+    background: url(/fonts/glyphiconssvg/glyphicons-basic-470-security-camera.svg);
+    background-repeat: no-repeat;
+    margin-top: 5px; }
+  
+  /* MEDIA */
+  /* FONT */
+  /*$font_italic: opensans-italic, Arial, Helvetica, sans-serif;
+  $font_medium: opensans-bold, Arial, Helvetica, sans-serif;
+  $font_medium_italic: opensans-bolditalic, Arial, Helvetica, sans-serif;
+  $font_bold: opensans-extrabold, Arial, Helvetica, sans-serif;
+  $font_bold_italic: opensans-semibolditalic, Arial, Helvetica, sans-serif;*/
+  /* COLOR */
+  /* COLOR */
+  .white {
+    color: #ffffff; }
+  
+  .bgay {
+    color: #585657; }
+  
+  .grey {
+    color: #9d9d9b; }
+  
+  .light_brey {
+    color: #dfdfdf; }
+  
+  .light {
+    color: #f2f2f2; }
+  
+  .green {
+    color: #7ea40c; }
+  
+  .light_green {
+    color: #abce0c; }
+  
+  .red {
+    color: #ff0000; }
+  
+  .spint {
+    color: #d60b52; }
+  
+  .light_blue {
+    color: #00a096; }
+  
+  .blue {
+    color: #183c6c; }
+  
+  .yello {
+    color: #dc9807; }
+  
+  .black {
+    color: #3b3b3b; }
+  
+  .background-blue {
+    background-color: #183c6c; }
+  
+  .background-lignt_blue {
+    background-color: #00a096; }
+  
+  .background-lignt_green {
+    background-color: #abce0c; }
+  
+  .background-yello {
+    background-color: #dc9807; }
+  
+  .background-spint {
+    background-color: #d60b52; }
+  
+  .background-red {
+    background-color: #ff0000; }
+  
+  .background-light_yello {
+    background-color: #dcd12e; }
+  
+  .line_height_20 {
+    line-height: 20px; }
+  
+  @media screen and (max-width: 575px) {
+    .hidden-xs {
+      display: none; } }
+  h1 {
+    font-size: 28px;
+    line-height: 35px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #ffffff; }
+  
+  h2 {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    color: #183c6c; }
+  
+  a {
+    cursor: pointer; }
+  
+  button {
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease; }
+  
+  /*button:before {
+    content:'';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 38px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 2s ease;
+  }
+  button:hover::before {
+    width: 100%;
+  }*/
+  /*a {
+    color: $blue;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 2000ms ease;
+    &:hover{
+    text-decoration: none;
+    }
+  }
+  a:before{
+  
+    content:'';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    !*background: rgba(255,255,255,0.3);*!
+    background: $blue;
+    border-radius: 5px;
+    transition: all 2s ease;
+  }
+  a:hover:before {
+    width: 100%;
+  }*/
+  .alert-danger {
+    background-color: #dc3543cc;
+    color: #ffffff;
+    border-color: #721c24;
+    border-radius: 0px;
+    margin-bottom: 0px; }
+  
+  .alert-success {
+    border-radius: 0px;
+    margin-bottom: 0px; }
+  
+  .alert p {
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px; }
+  
+  .top-menue-bar .fontWhite {
+    margin-top: 3px; }
+    .top-menue-bar .fontWhite .glyphicons-menu-hamburger {
+      font-size: 23px;
+      margin-top: -8px; }
+  .top-menue-bar .glyphicons-user-remove {
+    font-size: 20px;
+    line-height: 16px; }
+  .top-menue-bar .logout-text {
+    line-height: 32px; }
+  .top-menue-bar .show > .btn-secondary.dropdown-toggle {
+    border-color: #183c6c;
+    background-color: #ffffff;
+    color: #3b3b3b; }
+  .top-menue-bar .group-language {
+    display: inline-block;
+    padding-top: 0px; }
+  .top-menue-bar .group-language button {
+    border-color: #183c6c;
+    background-color: #ffffff;
+    color: #3b3b3b;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    padding: 5px 8px 5px;
+    margin-bottom: 4px; }
+  
+  .headerWrapper .header-news {
+    font-size: 18px;
+    text-transform: uppercase; }
+    .headerWrapper .header-news .headerNewsLink {
+      overflow: hidden;
+      display: inline-block; }
+    .headerWrapper .header-news .halflings {
+      float: left;
+      padding-right: 5px; }
+    .headerWrapper .header-news .header-bottom-text {
+      line-height: 20px;
+      color: #585657;
+      float: left; }
+  .headerWrapper .header-logo-rp {
+    padding-right: 20px; }
+  .headerWrapper .header-bottom-logo {
+    margin-top: -10px; }
+  .headerWrapper .header-bottom-right {
+    padding-top: 10px; }
+  
+  .select2-container select2-container--default {
+    max-width: 100%; }
+  
+  .dataTables_wrapper.dt-bootstrap4 .dataTables_paginate {
+    padding-top: 10px; }
+  
+  .main-contain p {
+    word-break: break-word; }
+  
+  #yourSalesOverview,
+  #productExtra {
+    min-height: calc(100vh - 322px); }
+    @media (max-width: 767px) {
+      #yourSalesOverview,
+      #productExtra {
+        min-height: calc(100vh - 310px); } }
+  
+  @media screen and (max-width: 991px) {
+    .headerWrapper .header-news {
+      font-size: 16px; }
+    .headerWrapper .header-logo-rp {
+      height: 33px;
+      padding-right: 0px; }
+    .headerWrapper .header-logo-gh {
+      height: 29px; }
+    .headerWrapper .item-center {
+      margin-left: -10px;
+      margin-right: 10px; }
+    .headerWrapper .header-bottom-logo {
+      margin-top: -5px; } }
+  @media screen and (max-width: 767px) {
+    .top-menue-bar .sidebar-toggler {
+      padding-left: 0px;
+      margin-left: -8px; }
+    .top-menue-bar .group-language {
+      display: block !important;
+      text-align: center;
+      margin-top: 2px; } }
+  @media screen and (min-width: 1400px) {
+    .container {
+      max-width: 100% !important; }
+  
+    .sidebar-lg-show .banner .container {
+      padding-left: 220px !important; }
+  
+    .sidebar-lg-show .container {
+      padding-left: 225px !important; }
+  
+    .sidebar-minimized .container {
+      padding-left: 65px !important; } }
+  @media screen and (max-width: 767px) {
+    .headerWrapper .container {
+      padding: 0; } }
+  .disabled-feature {
+    background: #6c757d !important;
+    color: #ffffff !important;
+    border-color: #6c757d !important;
+    cursor: initial !important; }
+  
+  /*# sourceMappingURL=custom.css.map */
